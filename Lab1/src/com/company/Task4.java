@@ -1,5 +1,6 @@
+package com.company;
 
-public class Task4_Calculator {
+public class Task4 {
     private static int[] crc_table = new int[256];
     public static void main(String[] args) {
         InitTable();

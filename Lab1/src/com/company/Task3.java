@@ -1,5 +1,6 @@
+package com.company;
 
-public class Task3_Binary {
+public class Task3 {
 
     public static void main(String[] args)  {
         int[] array = new int[]{4, 5, 7, 11, 12, 15, 15, 21, 40, 45};

@@ -1,3 +1,4 @@
+package com.company;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -5,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class Task5_ActuallyTime {
+public class Task5 {
 
     public static void main(String[] args)
     {
