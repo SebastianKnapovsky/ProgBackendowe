@@ -42,7 +42,7 @@ public class UsersController {
             @RequestParam(defaultValue = "20", name="page-size") int pageSize
     ) {
         List<UserEntity> users = new ArrayList<>();
-        users.add(new UserEntity(1L, "Max", 22));
+        users.add(new UserEntity(1L, "Krystian", 22));
         users.add(new UserEntity(2L, "Klaudia", 21));
         users.add(new UserEntity(3L, "Szymon", 18));
         users.add(new UserEntity(4L, "Szymon", 22));
