@@ -1,0 +1,14 @@
+1. Utworzenie i konfiguracja projektu
+2. Utworzenie bazy danych w MSSM Studio 
+3. Utworzenie modeli
+4. Dodanie klasy AppDbContext do reprezentacji tabel
+5. Utworzenie relacji między modelami w klasie AppDbContext
+6. Migracja modeli do bazy danych
+7. Utworzenie Kontrollerów z metodami GET, POST, PUT, DELETE
+8. Dodanie endpointa w SuperHeroController który wyszukuje bohaterów po id
+9. Dodanie enpointa w  SuperHeroController usuwa bohatera po id
+10.Dodanie enuma z użytkownikami 
+11.Dodanie enpointa zwracającego użytkowników których rola to admin
+12.Dodanie enpointa zwracającego użytkowników których rola to user
+13.Imprelemtacja rabbbitqm
+14.wysyłanie maili
