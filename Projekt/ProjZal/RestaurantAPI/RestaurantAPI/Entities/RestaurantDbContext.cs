@@ -6,7 +6,7 @@ namespace RestaurantAPI.Entities
     {
         private string _connectionString = "Data Source=SKNAP;User ID=wp_user;Password=corridor;Initial Catalog=RestaurantDb;MultipleActiveResultSets=true";
         public DbSet<Restaurant> Restaurants { get; set; }
-        public DbSet<Adress> Adresses { get; set; }
+        public DbSet<Address> Addresses { get; set; }
         public DbSet<Dish> Dishes { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -18,6 +18,14 @@ namespace RestaurantAPI.Entities
             modelBuilder.Entity<Dish>()
                 .Property(d => d.Name)
                 .IsRequired();
+            modelBuilder.Entity<Address>()
+               .Property(a => a.City)
+               .IsRequired()
+               .HasMaxLength(50);
+            modelBuilder.Entity<Address>()
+               .Property(a => a.Street)
+               .IsRequired()
+               .HasMaxLength(50);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

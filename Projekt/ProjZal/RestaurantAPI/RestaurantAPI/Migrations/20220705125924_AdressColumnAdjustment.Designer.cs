@@ -11,8 +11,8 @@ using RestaurantAPI.Entities;
 namespace RestaurantAPI.Migrations
 {
     [DbContext(typeof(RestaurantDbContext))]
-    [Migration("20220705113959_Init")]
-    partial class Init
+    [Migration("20220705125924_AdressColumnAdjustment")]
+    partial class AdressColumnAdjustment
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace RestaurantAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("RestaurantAPI.Entities.Adress", b =>
+            modelBuilder.Entity("RestaurantAPI.Entities.Address", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,7 +33,8 @@ namespace RestaurantAPI.Migrations
 
                     b.Property<string>("City")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("PostalCode")
                         .IsRequired()
@@ -41,11 +42,12 @@ namespace RestaurantAPI.Migrations
 
                     b.Property<string>("Street")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Adresses");
+                    b.ToTable("Addresses");
                 });
 
             modelBuilder.Entity("RestaurantAPI.Entities.Dish", b =>
@@ -85,7 +87,7 @@ namespace RestaurantAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("AdressId")
+                    b.Property<int>("AddressId")
                         .HasColumnType("int");
 
                     b.Property<string>("Category")
@@ -114,7 +116,7 @@ namespace RestaurantAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AdressId")
+                    b.HasIndex("AddressId")
                         .IsUnique();
 
                     b.ToTable("Restaurants");
@@ -133,16 +135,16 @@ namespace RestaurantAPI.Migrations
 
             modelBuilder.Entity("RestaurantAPI.Entities.Restaurant", b =>
                 {
-                    b.HasOne("RestaurantAPI.Entities.Adress", "Adress")
+                    b.HasOne("RestaurantAPI.Entities.Address", "Address")
                         .WithOne("Restaurant")
-                        .HasForeignKey("RestaurantAPI.Entities.Restaurant", "AdressId")
+                        .HasForeignKey("RestaurantAPI.Entities.Restaurant", "AddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Adress");
+                    b.Navigation("Address");
                 });
 
-            modelBuilder.Entity("RestaurantAPI.Entities.Adress", b =>
+            modelBuilder.Entity("RestaurantAPI.Entities.Address", b =>
                 {
                     b.Navigation("Restaurant")
                         .IsRequired();
