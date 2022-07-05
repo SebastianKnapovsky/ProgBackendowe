@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Projekt",
-    "\\Projekt\\Hero",
-    "\\Projekt\\Hero\\SuperHeroAPI",
-    "\\Projekt\\Hero\\SuperHeroAPI\\Migrations"
+    "\\Projekt"
   ],
-  "SelectedNode": "\\Projekt\\Hero\\SuperHeroAPI\\Migrations\\DataContextModelSnapshot.cs",
+  "SelectedNode": "\\Projekt\\ProjZal",
   "PreviewInSolutionExplorer": false
 }
