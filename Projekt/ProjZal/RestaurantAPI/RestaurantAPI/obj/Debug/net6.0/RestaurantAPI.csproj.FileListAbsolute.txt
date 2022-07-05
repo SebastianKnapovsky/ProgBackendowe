@@ -110,3 +110,5 @@ C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\Restau
 C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\obj\Debug\net6.0\ref\RestaurantAPI.dll
 C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\obj\Debug\net6.0\RestaurantAPI.pdb
 C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\obj\Debug\net6.0\RestaurantAPI.genruntimeconfig.cache
+C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
