@@ -1,0 +1,17 @@
+1.Stworzyenie aplikacji zgodnie z architekturą REST 
+2.Dodanie funkcji umożliwiających czytanie, tworzenie, modyfikowanie  usuwanie danych z serwera
+3.Utworzenie bazy danych MS SQL w oparciu o klasy w C#
+4.Wysyłanie zapytań do bazy danych z kodu za pomocą ORM (Entity Framework Core)
+5.Walidacja przychodzących modeli i zwracanie odpowiednich komunikatów w przypadku nieprawidłowości
+6.Użycie automatycznego mapowania
+7.Użycie Postmana, aby korzystać z internetowego interfejsu API
+8.Użycie wbudowanego kontenera, aby wstrzyknąć zależności
+9.Dodanie Nloggera
+10.Konfiguracja Nloggera
+11.Zarejestrowanie błędów lub określonych informacji w pliku tekstowym
+12.Utworzenie dokumentacji za pomocą Swaggera
+13.Autentykacja użytkowników użytkowników za pomocą tokenów JWT
+14.Stworzenie własnych zasady autoryzacji
+15.Utworzenie tabeli użytkowników i jednostek ról
+16.Zabespiecznie hasła użytkowników za pomocą hashy
+17.Dodanie Pliku HowToUseAPI aby opisać korzystanie z Api
