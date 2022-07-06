@@ -132,3 +132,6 @@ C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\Restau
 C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\obj\Debug\net6.0\RestaurantAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

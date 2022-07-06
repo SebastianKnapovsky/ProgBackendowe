@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Projekt"
+    "\\Projekt",
+    "\\Projekt\\ProjZal",
+    "\\Projekt\\ProjZal\\RestaurantAPI",
+    "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI"
   ],
-  "SelectedNode": "\\Projekt\\ProjektZaliczeniowy",
+  "SelectedNode": "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\RestaurantSeeder.cs",
   "PreviewInSolutionExplorer": false
 }
