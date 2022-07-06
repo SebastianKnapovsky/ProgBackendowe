@@ -5,17 +5,26 @@ namespace RestaurantAPI.Entities
     public class RestaurantDbContext : DbContext 
     {
         //oltis
-        private string _connectionString = "Data Source=SKNAP;User ID=wp_user;Password=corridor;Initial Catalog=RestaurantDb;MultipleActiveResultSets=true";
+        //private string _connectionString = "Data Source=SKNAP;User ID=wp_user;Password=corridor;Initial Catalog=RestaurantDb;MultipleActiveResultSets=true";
         //
         //mojlap
-        //private string _connectionString = "Server=(localdb)\\localhost;Database=RestaurantDb;MultipleActiveResultSets=true";
+        private string _connectionString = "Server=(localdb)\\localhost;Database=RestaurantDb;MultipleActiveResultSets=true";
         //
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Dish> Dishes { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<User>()
+                .Property(u => u.Email)
+                .IsRequired();
+
+            modelBuilder.Entity<Role>()
+                .Property(u => u.Name)
+                .IsRequired();
+
             modelBuilder.Entity<Restaurant>()
                 .Property(r => r.Name)
                 .IsRequired()
