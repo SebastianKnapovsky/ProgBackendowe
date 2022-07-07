@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using RestaurantAPI.Authorization;
 using RestaurantAPI.Entities;
@@ -97,20 +98,31 @@ namespace RestaurantAPI.Services
             var result = _mapper.Map<RestaurantDto>(restaurant);
             return result;
         }
-        public IEnumerable<RestaurantDto> GetAll(string searchPhrase)
+        public PageResult<RestaurantDto> GetAll(RestaurantQuery query)
         {
-            var restaurants = _dbContext
+
+            var baseQuery = _dbContext
                 .Restaurants
                 .Include(r => r.Address)
                 .Include(r => r.Dishes)
-                .Where(r => searchPhrase == null || (r.Name.ToLower().Contains(searchPhrase.ToLower())
-                                                    || r.Description.ToLower().Contains(searchPhrase.ToLower())))
+                .Where(r => query.SearchPhrase == null || (r.Name.ToLower().Contains(query.SearchPhrase.ToLower())
+                                                    || r.Description.ToLower().Contains(query.SearchPhrase.ToLower())));
+
+            var restaurants = baseQuery
+                .Skip(query.PageSize * (query.PageNumber - 1))
+                .Take(query.PageSize)
                 .ToList();
+
+
+            var totalItemsCount = baseQuery.Count();
+
 
             var restaurantsDtos = _mapper.Map<List<RestaurantDto>>(restaurants);
 
+            var result = new PageResult<RestaurantDto>(restaurantsDtos, totalItemsCount, query.PageSize,query.PageNumber);
 
-            return restaurantsDtos;
+
+            return result;
         }
        
     }

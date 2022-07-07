@@ -4,8 +4,10 @@
     "\\Projekt",
     "\\Projekt\\ProjZal",
     "\\Projekt\\ProjZal\\RestaurantAPI",
-    "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI"
+    "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI",
+    "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\Models",
+    "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\Models\\Validators"
   ],
-  "SelectedNode": "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI.sln",
+  "SelectedNode": "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\Models\\Validators\\RegisterUserDtoValidator.cs",
   "PreviewInSolutionExplorer": false
 }
