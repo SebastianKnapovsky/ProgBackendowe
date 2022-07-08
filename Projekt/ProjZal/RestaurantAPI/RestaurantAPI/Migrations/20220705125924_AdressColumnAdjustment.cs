@@ -14,8 +14,10 @@ namespace RestaurantAPI.Migrations
                 type: "nvarchar(50)",
                 maxLength: 50,
                 nullable: false,
+                defaultValue: "",
                 oldClrType: typeof(string),
-                oldType: "nvarchar(max)");
+                oldType: "nvarchar(max)",
+                oldNullable: true);
 
             migrationBuilder.AlterColumn<string>(
                 name: "City",
@@ -24,7 +26,8 @@ namespace RestaurantAPI.Migrations
                 maxLength: 50,
                 nullable: false,
                 oldClrType: typeof(string),
-                oldType: "nvarchar(max)");
+                oldType: "nvarchar(max)",
+                oldNullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -33,7 +36,7 @@ namespace RestaurantAPI.Migrations
                 name: "Street",
                 table: "Addresses",
                 type: "nvarchar(max)",
-                nullable: false,
+                nullable: true,
                 oldClrType: typeof(string),
                 oldType: "nvarchar(50)",
                 oldMaxLength: 50);
@@ -42,7 +45,7 @@ namespace RestaurantAPI.Migrations
                 name: "City",
                 table: "Addresses",
                 type: "nvarchar(max)",
-                nullable: false,
+                nullable: true,
                 oldClrType: typeof(string),
                 oldType: "nvarchar(50)",
                 oldMaxLength: 50);

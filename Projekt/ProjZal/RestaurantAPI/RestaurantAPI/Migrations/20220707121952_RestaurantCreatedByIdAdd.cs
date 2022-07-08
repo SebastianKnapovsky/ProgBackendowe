@@ -24,7 +24,8 @@ namespace RestaurantAPI.Migrations
                 table: "Restaurants",
                 column: "CreatedById",
                 principalTable: "Users",
-                principalColumn: "Id");
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -21,14 +21,14 @@ namespace RestaurantAPI
                     _dbContext.Database.Migrate();
                 }
 
-                if (!_dbContext.Roles.Any())
+                if (_dbContext.Roles != null)
                 {
                     var roles = GetRoles();
                     _dbContext.Roles.AddRange(roles);
                     _dbContext.SaveChanges();
                 }
 
-                if (!_dbContext.Restaurants.Any())
+                if (_dbContext.Restaurants != null)
                 {
                     var restaurants = GetRestaurants();
                     _dbContext.Restaurants.AddRange(restaurants);

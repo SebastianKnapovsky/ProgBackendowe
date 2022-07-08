@@ -141,3 +141,4 @@ C:\Users\sknap\source\repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\Restaur
 C:\Users\sknap\source\repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\mojlap\Source\Repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\sknap\source\repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\RestaurantAPI.staticwebassets.runtime.json
+C:\Users\sknap\source\repos\ProgBackendowe\Projekt\ProjZal\RestaurantAPI\RestaurantAPI\bin\Debug\net6.0\swagger.json

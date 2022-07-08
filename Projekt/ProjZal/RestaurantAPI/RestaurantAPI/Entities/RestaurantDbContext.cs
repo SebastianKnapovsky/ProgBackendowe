@@ -2,10 +2,11 @@
 
 namespace RestaurantAPI.Entities
 {
-    public class RestaurantDbContext : DbContext 
+    public class RestaurantDbContext : DbContext
     {
         //oltis
-        private string _connectionString = "Data Source=SKNAP;User ID=wp_user;Password=corridor;Initial Catalog=RestaurantDb;MultipleActiveResultSets=true";
+        private string _connectionString = "Data Source=SKNAP;User ID=wp_user;Password=corridor;Initial Catalog=RestaurantDb2;MultipleActiveResultSets=true";
+
         //
         //mojlap
         //private string _connectionString = "Server=(localdb)\\localhost;Database=RestaurantDb;MultipleActiveResultSets=true";
@@ -15,7 +16,7 @@ namespace RestaurantAPI.Entities
         public DbSet<Dish> Dishes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
-        public object GetPendingMigrations { get; internal set; }
+        public object? GetPendingMigrations { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
