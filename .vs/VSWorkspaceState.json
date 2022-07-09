@@ -5,10 +5,9 @@
     "\\Projekt\\ProjZal",
     "\\Projekt\\ProjZal\\RestaurantAPI",
     "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI",
-    "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\Migrations",
     "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\Models",
     "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\Models\\Validators"
   ],
-  "SelectedNode": "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\Migrations\\20220705123230_Init.cs",
+  "SelectedNode": "\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

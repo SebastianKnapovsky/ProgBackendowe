@@ -1,0 +1,61 @@
+{{baseUsr}} = https://localhost:7251
+
+1.Test Rejestracji:
+adres = {{baseUrl}}/api/account/register
+przyk³adowe cia³o zapytania:
+{
+  "email": "incididunt@eads.pl",
+  "password": "Utsit123",
+  "confirmPassword": "Utsit123",
+  "nationality": "aliqua ipsum fugiat",
+  "dateOfBirth": "1993-05-17T00:55:57.942Z",
+  "roleId": 2
+}
+
+2.Test Logowania:
+adres: {{baseUrl}}/api/account/login
+Mo¿emy zalogowaæ siê tylko na istniej¹cego u¿ytkownika 
+Przyk³adowe body zapytania: 
+{
+  "email": "incididunt@eads.pl",
+  "password": "Utsit123"
+}
+Zapytanie zwraca Token JWT np:
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93
+cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1l
+aWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hc
+y54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aX
+R5L2NsYWltcy9uYW1lIjoiICIsImh0dHA6Ly9zY2hl
+bWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGV
+udGl0eS9jbGFpbXMvcm9sZSI6Ik1hbmFnZXIiLCJEYX
+RlT2ZCaXJ0aCI6IjE5OTMtMDUtMTciLCJOYXRpb25hbG
+l0eSI6ImFsaXF1YSBpcHN1bSBmdWdpYXQiLCJleHAiOjE
+2NTg2OTA2MTksImlzcyI6Imh0dHA6Ly9yZXN0YXVyYW50
+YXBpLmNvbSIsImF1ZCI6Imh0dHA6Ly9yZXN0YXVyYW50YX
+BpLmNvbSJ9.8KoPST-9FyFcvx2X6RIu78AZeOv-CN-5whr
+CEC9OQkM
+
+3.Dodawanie Restauracji:
+adres = {{baseUrl}}/api/restaurant
+W Header wymaga  klucza Authorization z wartoœci¹ "Bearer + tokenJwt"
+przyk³adowe body: 
+{
+  "city": "sint dolor officia Lorem15",
+  "name": "quis labore",
+  "street": "occaecat sit",
+  "description": "ex ut",
+  "category": "aliqua",
+  "hasDelivery": true,
+  "contactEmail": "in",
+  "contactNumber": "Ut mollit",
+  "postalCode": "deserunt dolore sit laborum"
+}
+
+Pobieranie Pliku : 
+{{baseUrl}}/file?fileName=private-file.txt wraz z auttoryzacj¹ w nag³óku
+
+{{baseUrl}}/api/restaurant/:restaurantId/dish
+
+{{baseUrl}}/api/restaurant/:restaurantId/dish/:dishId

@@ -32,7 +32,7 @@ namespace RestaurantAPI.Controllers
         [HttpPost]
         public ActionResult Upload([FromForm]IFormFile file)
         {
-            if(file != null && file.Length > 0)
+            if(file != null/* && file.Length > 0*/)
             {
                 var rootPath = Directory.GetCurrentDirectory();
 

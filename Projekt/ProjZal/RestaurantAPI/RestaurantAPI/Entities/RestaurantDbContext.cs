@@ -5,11 +5,11 @@ namespace RestaurantAPI.Entities
     public class RestaurantDbContext : DbContext
     {
         //oltis
-        private string _connectionString = "Data Source=SKNAP;User ID=wp_user;Password=corridor;Initial Catalog=RestaurantDb2;MultipleActiveResultSets=true";
+        //private string _connectionString = "Data Source=SKNAP;User ID=wp_user;Password=corridor;Initial Catalog=RestaurantDb2;MultipleActiveResultSets=true";
 
         //
         //mojlap
-        //private string _connectionString = "Server=(localdb)\\localhost;Database=RestaurantDb;MultipleActiveResultSets=true";
+        private string _connectionString = "Server=(localdb)\\localhost;Database=RestaurantDb1;MultipleActiveResultSets=true";
         //
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Address> Addresses { get; set; }

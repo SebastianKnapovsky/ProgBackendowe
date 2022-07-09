@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xgQLBPDGQQQEvs6kxCbhfXaEvgUhA6tYqZPT8Oc6TKc=",
+  "Hash": "6TzmmDuraauaaAS7RUtxnPb5sQtbchiOFKaP/D5CNDY=",
   "Source": "RestaurantAPI",
   "BasePath": "_content/RestaurantAPI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "RestaurantAPI\\wwwroot",
       "Source": "RestaurantAPI",
-      "ContentRoot": "C:\\Users\\sknap\\source\\repos\\ProgBackendowe\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mojlap\\Source\\Repos\\ProgBackendowe\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\wwwroot\\",
       "BasePath": "_content/RestaurantAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\sknap\\source\\repos\\ProgBackendowe\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\wwwroot\\sample-file.txt",
+      "Identity": "C:\\Users\\mojlap\\Source\\Repos\\ProgBackendowe\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\wwwroot\\sample-file.txt",
       "SourceId": "RestaurantAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\sknap\\source\\repos\\ProgBackendowe\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mojlap\\Source\\Repos\\ProgBackendowe\\Projekt\\ProjZal\\RestaurantAPI\\RestaurantAPI\\wwwroot\\",
       "BasePath": "_content/RestaurantAPI",
       "RelativePath": "sample-file.txt",
       "AssetKind": "All",
