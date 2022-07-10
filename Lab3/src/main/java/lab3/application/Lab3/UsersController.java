@@ -1,36 +1,15 @@
 package lab3.application.Lab3;
 
-import org.apache.catalina.User;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Scope;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UsersController {
-
-    @PostConstruct
-    private void onCreate()
-    {
-
-    }
-
-    @PreDestroy
-    private void onDestruct()
-    {
-
-    }
 
     @Autowired
     private UsersService usersService;
@@ -41,21 +20,62 @@ public class UsersController {
             @RequestParam(defaultValue = "1", name="page-number") int pageNumber,
             @RequestParam(defaultValue = "20", name="page-size") int pageSize
     ) {
-        List<UserEntity> users = new ArrayList<>();
-        users.add(new UserEntity(1L, "Krystian", 22));
-        users.add(new UserEntity(2L, "Klaudia", 21));
-        users.add(new UserEntity(3L, "Szymon", 18));
-        users.add(new UserEntity(4L, "Szymon", 22));
+        return usersService.getUsers(pageNumber, pageSize);
+    }
 
+    @RequestMapping(
+            value = "api/users/create",
+            method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    @ResponseBody
+    public UserEntity createUser(
+            @RequestBody UserEntity user
+    ) {
+        return usersService.createUser(user);
+    }
 
-        //Hashmap .Values
+    @RequestMapping(
+            value = "api/users/{id}",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    @ResponseBody
+    public ResponseEntity getUser(@PathVariable Integer id) throws JsonProcessingException {
+        return usersService.getUser(id);
+    }
 
-        UsersPage userPage = new UsersPage();
-        userPage.setUsers(users);
-        userPage.setPageNumber(pageNumber);
-        userPage.setTotalCount(users.size());
-        userPage.setPageSize(pageSize);
+    @RequestMapping(
+            value = "api/users/{id}/update",
+            method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    @ResponseBody
+    public ResponseEntity updateUser(@PathVariable Integer id, @RequestBody UserEntity user) throws JsonProcessingException {
+        try {
+            return usersService.updateUser(id, user);
+        } catch (Exception exception) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .body("{\"result\":\"true\"}");
+        }
+    }
 
-        return userPage;
+    @RequestMapping(
+            value = "api/users/{id}/remove",
+            method = RequestMethod.DELETE
+    )
+    @ResponseBody
+    public ResponseEntity deleteUser(@PathVariable Integer id)
+    {
+        try {
+            usersService.deleteUsers(id);
+        } catch (Exception exception) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .body("{\"result\":\"true\"}");
+        }
+
+        return null;
     }
 }
